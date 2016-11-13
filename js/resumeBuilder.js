@@ -63,19 +63,19 @@ $("#header").append(formattedMsg);
         {
        "Name"     : "Madras Institute of technology",
        "Degree"   : "Bachelore of Engineering",
-       "Location" : "chennai",
+       "location" : "chennai",
        "major"    :"Electronics and Communication"
      },
      {
         "Name"    : "SRV Boys Higher Secondary school",
        "Degree"   : "12TH grade",
-       "Location" : "Rasipuram",
+       "location" : "Rasipuram",
        "major"    : "Higher Secondary"
      },
      {
        "Name"     : "Sri Vidya Mandir Higher Secondary School Rasipuram",
        "Degree"   : "10TH grade",
-       "Location" : "Rasipuram",
+       "location" : "Rasipuram",
        "major"    : "Matriculation Board"
      }
   ]
@@ -92,7 +92,7 @@ $("#header").append(formattedMsg);
    $("#education").append(HTMLschoolStart);
   var formattedschoolName=HTMLschoolName.replace("%data%",i.Name);
   var formattedschoolDegree=HTMLschoolDegree.replace("%data%",i.Degree);
-  var formattedschoolLocation =HTMLschoolLocation.replace("%data%",i.Location );
+  var formattedschoolLocation =HTMLschoolLocation.replace("%data%",i.location );
   var formattedschoolMajor=HTMLschoolMajor.replace("%data%",i.major);
 
  
