@@ -176,7 +176,10 @@ span {
 #lets-connect {
   text-align: center;
 }
-
+.heading:hover
+{
+  color: red;
+}
 
 
 }
