@@ -57,9 +57,7 @@ h2,
 h3,
 h4,
 h5 {
-  padding-top:10px;
-  padding-bottom:10px;
-  padding-left:initial;
+  padding:10px 5%;
 
 
 }
@@ -179,10 +177,7 @@ span {
   text-align: center;
 }
 
-#workExperience,#projects,#education{
-  padding-right:5%;
-  padding-left: 5%;
-  
+
 
 }
 #mapDiv h2
