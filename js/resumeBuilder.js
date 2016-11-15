@@ -23,9 +23,10 @@ var skill =["HTML","Javascripts","C++","C"];
  	"skills" :skill,
  	"welcome_message":"Enthustiatic programmer,who seeks new things",
  }
+ bio.display=function()
+ {
  
 var formattedName =HTMLheaderName.replace("%data%",bio.name);
-
 var formattedRole =HTMLheaderRole.replace("%data%",bio.role);
 $("#header").prepend(formattedRole);
 $("#header").prepend(formattedName);
@@ -54,7 +55,10 @@ $("#skills").append(formattedskills);
 
 var formattedMsg =HTMLwelcomeMsg.replace("%data%",bio.welcome_message);
 $("#skills").append(formattedMsg);
+}
 
+
+bio.display();
   /*var work= {};
   work.employer = "xyz";
   work.title = "System Analyst";
