@@ -18,7 +18,7 @@ var skill =["progamming","HTML","C++","C"];
   "location":"chennai"
  	},
 
- 	"bioPic": "images/001.jpg",
+ 	"bioPic": "images/002.jpg",
  	"skills" :skill,
  	"welcome_message":"Enthustiatic programmer,who seeks new things",
  }
