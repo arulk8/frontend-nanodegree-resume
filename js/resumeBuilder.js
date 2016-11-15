@@ -45,13 +45,15 @@ $("#topContacts").append(formattedlocation);
 var formattedbioPic =HTMLbioPic.replace("%data%",bio.bioPic);
 $("#header").append(formattedbioPic);
 
+$("#header").append(HTMLskillsStart);
+
 for(var i=0 ;i<bio.skills.length;i++) {
 var formattedskills =HTMLskills.replace("%data%",bio.skills[i]);
-$("#header").append(formattedskills);
+$("#skills").append(formattedskills);
 }
 
 var formattedMsg =HTMLwelcomeMsg.replace("%data%",bio.welcome_message);
-$("#header").append(formattedMsg);
+$("#skills").append(formattedMsg);
 
   /*var work= {};
   work.employer = "xyz";
