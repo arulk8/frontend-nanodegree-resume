@@ -7,7 +7,7 @@ This is empty on purpose! Your code to build the resume will go here.
 $("#main").append(funThoughts); */
 
 
-var skill =["progamming","HTML","C++","C"];
+var skill =["HTML","Javascripts","C++","C"];
  var bio={
  	"name" :"Arulmurugan Kanagasabapathi",
  	"age" : 22,
@@ -15,6 +15,7 @@ var skill =["progamming","HTML","C++","C"];
  	contacts:{
  	"email":"arulmurugan194@gmail.com",
  	"phone_no": "9003568965",
+  "github" : "arulk8",
   "location":"chennai"
  	},
 
@@ -29,17 +30,25 @@ var formattedRole =HTMLheaderRole.replace("%data%",bio.role);
 $("#header").prepend(formattedRole);
 $("#header").prepend(formattedName);
 
+var formattedmobile =HTMLmobile.replace("%data%",bio.contacts.phone_no);
+$("#topContacts").append(formattedmobile);
+
+var formattedgithub =HTMLgithub.replace("%data%",bio.contacts.github);
+$("#topContacts").append(formattedgithub);
+
+var formattedemail =HTMLemail.replace("%data%",bio.contacts.email);
+$("#topContacts").append(formattedemail);
+
+var formattedlocation =HTMLlocation.replace("%data%",bio.contacts.location);
+$("#topContacts").append(formattedlocation);
+
 var formattedbioPic =HTMLbioPic.replace("%data%",bio.bioPic);
 $("#header").append(formattedbioPic);
 
-var formattedmobile =HTMLmobile.replace("%data%",bio.contacts.phone_no);
-$("#header").append(formattedmobile);
-
-var formattedemail =HTMLemail.replace("%data%",bio.contacts.email);
-$("#header").append(formattedemail);
-
-var formattedskills =HTMLskills.replace("%data%",bio.skills);
+for(var i=0 ;i<bio.skills.length;i++) {
+var formattedskills =HTMLskills.replace("%data%",bio.skills[i]);
 $("#header").append(formattedskills);
+}
 
 var formattedMsg =HTMLwelcomeMsg.replace("%data%",bio.welcome_message);
 $("#header").append(formattedMsg);
