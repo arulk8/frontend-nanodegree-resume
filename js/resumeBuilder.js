@@ -16,7 +16,7 @@ var skill =["HTML","Javascripts","C++","C"];
  	"email":"arulmurugan194@gmail.com",
  	"phone_no": "9003568965",
   "github" : "arulk8",
-  "location":"Chennai"
+  "location":"Chennai,India"
  	},
 
  	"bioPic": "images/002.jpg",
@@ -55,6 +55,8 @@ $("#skills").append(formattedskills);
 
 var formattedMsg =HTMLwelcomeMsg.replace("%data%",bio.welcome_message);
 $("#skills").append(formattedMsg);
+
+$("#footerContacts").append(formattedmobile,formattedemail,formattedgithub);
 }
 
 
@@ -78,19 +80,19 @@ bio.display();
         {
        "Name"     : "Madras Institute of technology",
        "Degree"   : "Bachelore of Engineering",
-       "location" : "Chennai",
+       "location" : "Chennai,India",
        "major"    :"Electronics and Communication"
      },
      {
         "Name"    : "SRV Boys Higher Secondary school",
        "Degree"   : "12TH grade",
-       "location" : "Rasipuram",
+       "location" : "Salem,India",
        "major"    : "Higher Secondary"
      },
      {
        "Name"     : "Sri Vidya Mandir Higher Secondary School Rasipuram",
        "Degree"   : "10TH grade",
-       "location" : "Rasipuram",
+       "location" : "Salem,India",
        "major"    : "Matriculation Board"
      }
   ]
@@ -130,7 +132,7 @@ education.display();
   		 "employer":"Infosys",
   		 "title": "system Analyst",
   		 "dates": "2016-Present",
-  		 "location":"Banglore",
+  		 "location":"Banglore,India",
   		 "description":"Not working presently in training"
     	}
  	]
@@ -209,19 +211,22 @@ work.display();
  var onlineclass={
           "classes": [
           {
-            "Title": "Introduction to HTML ans CSS",
+            "Title" : "Introduction to HTML ans CSS",
             "school": "udacity",
-            "URL"  : "https://classroom.udacity.com/courses/ud304"
+            "URL"   : "https://classroom.udacity.com/courses/ud304",
+            "date"  : "2016"
           },
           {
-            "Title": "Basics of Javascripts",
+            "Title" : "Basics of Javascripts",
             "school": "udacity",
-            "URL"  : "https://classroom.udacity.com/courses/ud804"
+            "URL"   : "https://classroom.udacity.com/courses/ud804",
+            "date"  : "2016"
           },
           {
-            "Title": "Introduction to ComputerScience",
+            "Title" : "Introduction to ComputerScience",
             "school": "udacity",
-            "URL"  : "https://classroom.udacity.com/courses/cs101"
+            "URL"   : "https://classroom.udacity.com/courses/cs101",
+            "date"  : "2016"
           }
 
           ]
@@ -229,25 +234,30 @@ work.display();
 
 $("#education").append(HTMLonlineClasses);
 
+onlineclass.display =function()
+{
+
 onlineclass.classes.forEach(function(i)
   {
 
    var formattedonlineTitle = HTMLonlineTitle.replace("%data%",i.Title);
-   $("#education").append(formattedonlineTitle);
+  // $("#education").append(formattedonlineTitle);
 
    var formattedonlineSchool = HTMLonlineSchool.replace("%data%",i.school);
-   $("#education").append(formattedonlineSchool);
+   var TitleandSchool = formattedonlineTitle + formattedonlineSchool;
+
+   $("#education").append(TitleandSchool);
+
+   var formattedonlineDates = HTMLonlineDates.replace("%data%",i.date);
+   $("#education").append(formattedonlineDates);
 
    var formattedonlineURL = HTMLonlineURL.replace("%data%",i.URL);
    $("#education").append(formattedonlineURL);
   }
 
 );
-
-
-
-
-
+}
+onlineclass.display();
 
 
 /* $(document).click(
