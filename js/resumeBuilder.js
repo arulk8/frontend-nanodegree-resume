@@ -150,10 +150,10 @@ $("#footerContacts").append(formattedmobile,formattedemail,formattedgithub);
   
 education.display= function()
 {
-
+ $("#education").append(HTMLschoolStart);
  education.schools.forEach(function(i)
  {
-   $("#education").append(HTMLschoolStart);
+   
   var formattedschoolName=HTMLschoolName.replace("%data%",i.Name);
   var formattedschoolDegree=HTMLschoolDegree.replace("%data%",i.Degree);
   var formattedschoolLocation =HTMLschoolLocation.replace("%data%",i.location );
