@@ -100,7 +100,8 @@ bio.display();
      school["Degree"] = "Bachelore of Engineering";
      school["Location"] = "chennai";
      school["major"]= "Electronics and Communication"; */
-
+education.display= function()
+{
 
  education.schools.forEach(function(i)
  {
@@ -115,8 +116,12 @@ bio.display();
   $("#education").append(formattedschoolDegree);
   $("#education").append(formattedschoolLocation);
   $("#education").append(formattedschoolMajor);
+ }
+ );
 }
-  );
+
+education.display();
+
 
   var work={
   	"jobs": [
@@ -126,43 +131,40 @@ bio.display();
   		 "dates": "In progress",
   		 "location":"Banglore",
   		 "description":"Not working presently in training"
-    	},
-
-    	{
-    	 "employer" :"ZOHO Corps",
-  		 "title":"javascript developer",
-  		 "dates":"In future",
-  		 "location":"chennai",
-  		 "description":"my carrier shift will be after going to this company "
-  		}
+    	}
  	]
  };
 
- 
-  	
-for(job in work.jobs)
+ work.display =function()
+ { 
+
+ work.jobs.forEach(function(job)
   {
   	
   	$("#workExperience").append(HTMLworkStart);
   	
-  	var formattedworkEmployer = HTMLworkEmployer.replace("%data%",work.jobs[job].employer);
+  	var formattedworkEmployer = HTMLworkEmployer.replace("%data%",job.employer);
   	$("#workExperience").append(formattedworkEmployer);
 
-  	var formattedworkTitle = HTMLworkTitle.replace("%data%",work.jobs[job].title);
+  	var formattedworkTitle = HTMLworkTitle.replace("%data%",job.title);
   	$("#workExperience").append(formattedworkTitle);
 
-  	var formattedworkDates = HTMLworkDates.replace("%data%",work.jobs[job].dates);
+  	var formattedworkDates = HTMLworkDates.replace("%data%",job.dates);
   	$("#workExperience").append(formattedworkDates);
 
-  	var formattedworkLocation = HTMLworkLocation.replace("%data%",work.jobs[job].location);
+  	var formattedworkLocation = HTMLworkLocation.replace("%data%",job.location);
   	$("#workExperience").append(formattedworkLocation);
 
-  	var formattedworkDescription = HTMLworkDescription.replace("%data%",work.jobs[job].description);
+  	var formattedworkDescription = HTMLworkDescription.replace("%data%",job.description);
   	$("#workExperience").append(formattedworkDescription);
 
   	var formattedEmployerTitle=formattedworkEmployer+formattedworkTitle;
   	//$(".work-Entry:last").append(formattedEmployerTitle);
   }
+  );
+}
+
+work.display();
 
    var project={
    	  "projects": [
@@ -200,6 +202,7 @@ for(job in work.jobs)
 );
 
 }
+
  project.display();
 
  $(document).click(
