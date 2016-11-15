@@ -16,7 +16,7 @@ var skill =["HTML","Javascripts","C++","C"];
  	"email":"arulmurugan194@gmail.com",
  	"phone_no": "9003568965",
   "github" : "arulk8",
-  "location":"chennai"
+  "location":"Chennai"
  	},
 
  	"bioPic": "images/002.jpg",
@@ -78,7 +78,7 @@ bio.display();
         {
        "Name"     : "Madras Institute of technology",
        "Degree"   : "Bachelore of Engineering",
-       "location" : "chennai",
+       "location" : "Chennai",
        "major"    :"Electronics and Communication"
      },
      {
@@ -111,9 +111,10 @@ education.display= function()
   var formattedschoolLocation =HTMLschoolLocation.replace("%data%",i.location );
   var formattedschoolMajor=HTMLschoolMajor.replace("%data%",i.major);
 
+  var formattedSchoolandDegree = formattedschoolName + formattedschoolDegree;
  
-  $("#education").append(formattedschoolName);
-  $("#education").append(formattedschoolDegree);
+  //$("#education").append(formattedschoolName);
+  $("#education").append(formattedSchoolandDegree);
   $("#education").append(formattedschoolLocation);
   $("#education").append(formattedschoolMajor);
  }
@@ -128,7 +129,7 @@ education.display();
   		{
   		 "employer":"Infosys",
   		 "title": "system Analyst",
-  		 "dates": "In progress",
+  		 "dates": "2016-Present",
   		 "location":"Banglore",
   		 "description":"Not working presently in training"
     	}
@@ -144,13 +145,13 @@ education.display();
   	$("#workExperience").append(HTMLworkStart);
   	
   	var formattedworkEmployer = HTMLworkEmployer.replace("%data%",job.employer);
-  	$("#workExperience").append(formattedworkEmployer);
-
   	var formattedworkTitle = HTMLworkTitle.replace("%data%",job.title);
-  	$("#workExperience").append(formattedworkTitle);
 
-  	var formattedworkDates = HTMLworkDates.replace("%data%",job.dates);
-  	$("#workExperience").append(formattedworkDates);
+    var formattedEmployerTitle=formattedworkEmployer+formattedworkTitle;
+  	$("#workExperience").append(formattedEmployerTitle);
+
+    var formattedworkDates = HTMLworkDates.replace("%data%",job.dates);
+    $("#workExperience").append(formattedworkDates);
 
   	var formattedworkLocation = HTMLworkLocation.replace("%data%",job.location);
   	$("#workExperience").append(formattedworkLocation);
@@ -158,8 +159,8 @@ education.display();
   	var formattedworkDescription = HTMLworkDescription.replace("%data%",job.description);
   	$("#workExperience").append(formattedworkDescription);
 
-  	var formattedEmployerTitle=formattedworkEmployer+formattedworkTitle;
-  	//$(".work-Entry:last").append(formattedEmployerTitle);
+  	
+  	$(".work-Entry:last").append(formattedEmployerTitle);
   }
   );
 }
@@ -205,7 +206,51 @@ work.display();
 
  project.display();
 
- $(document).click(
+ var onlineclass={
+          "classes": [
+          {
+            "Title": "Introduction to HTML ans CSS",
+            "school": "udacity",
+            "URL"  : "https://classroom.udacity.com/courses/ud304"
+          },
+          {
+            "Title": "Basics of Javascripts",
+            "school": "udacity",
+            "URL"  : "https://classroom.udacity.com/courses/ud804"
+          },
+          {
+            "Title": "Introduction to ComputerScience",
+            "school": "udacity",
+            "URL"  : "https://classroom.udacity.com/courses/cs101"
+          }
+
+          ]
+ };
+
+$("#education").append(HTMLonlineClasses);
+
+onlineclass.classes.forEach(function(i)
+  {
+
+   var formattedonlineTitle = HTMLonlineTitle.replace("%data%",i.Title);
+   $("#education").append(formattedonlineTitle);
+
+   var formattedonlineSchool = HTMLonlineSchool.replace("%data%",i.school);
+   $("#education").append(formattedonlineSchool);
+
+   var formattedonlineURL = HTMLonlineURL.replace("%data%",i.URL);
+   $("#education").append(formattedonlineURL);
+  }
+
+);
+
+
+
+
+
+
+
+/* $(document).click(
 function(loc)
 {
 var X= loc.pageX;
@@ -213,9 +258,8 @@ var Y= loc.pageY;
 console.log("X="+ X);
 console.log("Y="+ Y);
 }
-);
-
-  $("#main").append(internationalizeButton);
+);*/
+ $("#main").append(internationalizeButton);
 
   function inName(name)
   {
