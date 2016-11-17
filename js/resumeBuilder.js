@@ -45,21 +45,21 @@ var education = {
         "name"    : "Madras Institute of technology",
         "degree"  : "Bachelore of Engineering",
         "location": "Chennai,India",
-        "major"   : "Electronics and Communication",
+        "majors"   : "Electronics and Communication",
         "dates"   : "2012-2016",
         "url"     :"http://www.mitindia.edu"
     }, {
         "name"    : "SRV Boys Higher Secondary school",
         "degree"  : "12TH grade",
         "location": "Salem,India",
-        "major"   : "Higher Secondary",
+        "majors"   : "Higher Secondary",
         "dates"   : "2010-2012",
         "url"     :"http://www.srvacademy.org/hitechboys"
     }, {
         "name"    : "Sri Vidya Mandir Higher Secondary School Rasipuram",
         "degree"  : "10TH grade",
         "location": "Salem,India",
-        "major"   : "Matriculation Board",
+        "majors"   : "Matriculation Board",
         "dates"   : "2006-2010",
         "url"     :"http://www.srividyamandirrspm.org/"
     }
@@ -93,8 +93,7 @@ var education = {
         var formattedschoolDegree = HTMLschoolDegree.replace("%data%", i.degree);
         var formattedschoolLocation = HTMLschoolLocation.replace("%data%", i.location);
         var formattedschoolDates = HTMLschoolDates.replace("%data%", i.dates);
-        var formattedschoolMajor = HTMLschoolMajor.replace("%data%", i.major);
-        var formattedschoolMajor = HTMLschoolMajor.replace("%data%", i.major);
+        var formattedschoolMajor = HTMLschoolMajor.replace("%data%", i.majors);
         var formattedschoolURL = HTMLschoolURL.replace("%data%", i.url)
 
         var formattedSchoolandDegree = formattedschoolName + formattedschoolDegree;
