@@ -231,7 +231,7 @@ $("#mapDiv").append(googleMap);
 
 $(document).ready(function() {
     $(".work-entry").hide();
-    //toggle the componenet with class msg_body
+    //toggles
     $(".heading").click(function() {
         $(this).next(".work-entry").slideToggle(500);
     });
@@ -239,7 +239,7 @@ $(document).ready(function() {
 });
 $(document).ready(function() {
     $(".project-entry").hide();
-    //toggle the componenet with class msg_body
+    //toggles
     $(".heading").click(function() {
         $(this).next(".project-entry").slideToggle(500);
     });
@@ -247,7 +247,6 @@ $(document).ready(function() {
 });
 $(document).ready(function() {
     $(".education-entry").hide();
-    //toggle the componenet with class msg_body
     $(".heading").click(function() {
         $(this).next(".education-entry").slideToggle(500);
     });
